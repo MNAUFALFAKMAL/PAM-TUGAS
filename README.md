@@ -69,8 +69,7 @@ Tampilan di bawah ini mendemonstrasikan hasil dari perpindahan antar layar (rout
 
 | Daftar Catatan (Notes) | Detail & Hapus Catatan | Form Tambah/Edit |
 | :---: | :---: | :---: |
-| <img width="430" height="943" alt="Image" src="https://github.com/user-attachments/assets/479bcd37-7c33-4f2b-8b4d-df341779058c" />
-| <img width="430" height="943" alt="Image" src="https://github.com/user-attachments/assets/46dab231-dff0-4d01-9966-9d99d382ab2f" /> | <img width="430" height="943" alt="Image" src="https://github.com/user-attachments/assets/02d0473d-3304-478c-b04f-9b2d62f140dc" /> |
+| <img width="430" height="943" alt="Image" src="https://github.com/user-attachments/assets/479bcd37-7c33-4f2b-8b4d-df341779058c" />| <img width="430" height="943" alt="Image" src="https://github.com/user-attachments/assets/46dab231-dff0-4d01-9966-9d99d382ab2f" /> | <img width="430" height="943" alt="Image" src="https://github.com/user-attachments/assets/02d0473d-3304-478c-b04f-9b2d62f140dc" /> |
 
 *(Catatan: Layar di atas saling terhubung menggunakan NavController dengan mem-passing parameter `noteId`)*
 
