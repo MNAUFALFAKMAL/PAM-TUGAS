@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.composeHotReload)
+    kotlin("plugin.serialization") version "1.9.20"
 }
 
 kotlin {
@@ -29,20 +30,29 @@ kotlin {
     jvm()
 
     sourceSets {
+        val ktorVersion = "2.3.7"
+
         androidMain.dependencies {
             implementation(libs.compose.uiToolingPreview)
             implementation(libs.androidx.activity.compose)
+            implementation("io.ktor:ktor-client-android:${ktorVersion}")
         }
         commonMain.dependencies {
             implementation(libs.compose.runtime)
             implementation(libs.compose.foundation)
             implementation(libs.compose.material3)
             implementation("org.jetbrains.compose.material:material-icons-extended:1.7.3")
+            implementation("org.jetbrains.androidx.navigation:navigation-compose:2.7.0-alpha07")
             implementation(libs.compose.ui)
             implementation(libs.compose.components.resources)
             implementation(libs.compose.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
+            implementation("io.ktor:ktor-client-core:${ktorVersion}")
+            implementation("io.ktor:ktor-client-content-negotiation:${ktorVersion}")
+            implementation("io.ktor:ktor-serialization-kotlinx-json:${ktorVersion}")
+            implementation("io.ktor:ktor-client-logging:${ktorVersion}")
+            implementation("org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
