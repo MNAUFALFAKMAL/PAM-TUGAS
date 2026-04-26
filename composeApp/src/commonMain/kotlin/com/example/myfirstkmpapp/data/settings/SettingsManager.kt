@@ -7,7 +7,6 @@ class SettingsManager(
     private val settings: Settings
 ) {
     var theme: String
-        // Menggunakan getString lebih stabil daripada operator []
         get() = settings.getString("theme", "system")
         set(value) {
             settings.putString("theme", value)

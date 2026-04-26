@@ -100,7 +100,7 @@ compose.desktop {
 
 sqldelight {
     databases {
-        create("NotesDatabase") {
+        create("MyDatabase") {
             packageName.set("com.example.myfirstkmpapp.db")
         }
     }

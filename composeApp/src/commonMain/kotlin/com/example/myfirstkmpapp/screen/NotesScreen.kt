@@ -42,7 +42,7 @@ fun NotesScreen(
         floatingActionButton = {
             FloatingActionButton(
                 onClick = onAddClick,
-                containerColor = MaterialTheme.colorScheme.primary // Menggunakan Pink kamu
+                containerColor = MaterialTheme.colorScheme.primary
             ) {
                 Text("+", fontSize = 24.sp, color = Color.White)
             }
@@ -90,8 +90,6 @@ fun NotesScreen(
                                             style = MaterialTheme.typography.bodyMedium
                                         )
                                     }
-
-                                    // Tombol Hapus
                                     IconButton(onClick = { viewModel.deleteNote(note.id) }) {
                                         Icon(
                                             imageVector = Icons.Default.Delete,

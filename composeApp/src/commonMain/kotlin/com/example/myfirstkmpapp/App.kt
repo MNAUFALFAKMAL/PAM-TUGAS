@@ -23,8 +23,6 @@ import com.example.myfirstkmpapp.screens.SettingsScreen
 import com.example.myfirstkmpapp.viewmodel.NotesViewModel
 import com.russhwolf.settings.Settings
 import kotlinx.coroutines.launch
-
-// Deklarasi Warna Pink Sesuai Keinginanmu
 val PinkPrimary = Color(0xFFD81B60)
 val PinkSecondary = Color(0xFFF06292)
 
@@ -39,13 +37,10 @@ val DarkColorScheme = darkColorScheme(
 
 @Composable
 fun App(driverFactory: DatabaseDriverFactory) {
-    // 1. Inisialisasi Database & Repository (Tetap dipertahankan)
     val database = remember { NotesDatabase(driverFactory.createDriver()) }
     val settingsManager = remember { SettingsManager(settings = Settings()) }
     val repository = remember { NoteRepository(database, settingsManager) }
     val viewModel = remember { NotesViewModel(repository) }
-
-    // 2. State Tema & Navigasi
     val theme by viewModel.theme.collectAsState()
     val colorScheme = if (theme == "dark") DarkColorScheme else LightColorScheme
     val animatedBackground by animateColorAsState(targetValue = colorScheme.background, tween(500))
@@ -78,11 +73,9 @@ fun App(driverFactory: DatabaseDriverFactory) {
                 }
             }
         ) {
-            // Box untuk background yang bisa animasi warna
             Box(modifier = Modifier.fillMaxSize().background(animatedBackground)) {
                 Scaffold(
                     bottomBar = {
-                        // Tampilkan BottomBar hanya jika tidak sedang di layar Editor
                         if (screen != "editor") {
                             NavigationBar {
                                 NavigationBarItem(
@@ -113,7 +106,6 @@ fun App(driverFactory: DatabaseDriverFactory) {
                                 editNoteId = id
                                 screen = "editor"
                             }
-                            // Jika NotesScreen butuh tombol buka drawer, tambahkan parameter di sini
                         )
 
                         "editor" -> NoteEditorScreen(
