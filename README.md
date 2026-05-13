@@ -42,9 +42,7 @@ Proyek ini berisi implementasi Dependency Injection menggunakan Koin dan serangk
 - [x] **Bonus (+10%)**: Coverage > 80%.
 
 ## Test Coverage Report
-*(Ganti gambar di bawah ini dengan screenshot hasil test coverage kamu yang menunjukkan angka > 80%)*
-![Test Coverage Report](./coverage_report_screenshot.png)
+<img width="1790" height="733" alt="Image" src="https://github.com/user-attachments/assets/90296eb5-9d82-4a4a-b6f9-56a7bc869013" />
 
 ## Video Demo (45 Detik)
-*(Masukkan link YouTube/Google Drive video demo kamu yang menampilkan proses run semua test hingga berstatus passed)*
-[Tonton Video Demo di sini](LINK_VIDEO_KAMU_DISINI)
+https://drive.google.com/file/d/1dKTYFTgXPHYq05fN6CEurwTChlSMZu6r/view?usp=sharing
